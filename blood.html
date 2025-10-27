@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,18 +155,20 @@
 
     // Function to handle form submission and show Thank You page
     function submitForm() {
-        const form = document.getElementById('donor-form');
         const name = document.getElementById('name').value;
         const bloodType = document.getElementById('blood-type').value;
         const contact = document.getElementById('contact').value;
 
+        // Only proceed if all fields are filled
         if (name && bloodType && contact) {
-            // You can store or process this data if you like
+            // Optionally: Store or process this data, but here we just show the Thank You page
             showSection('thank-you');
+        } else {
+            alert("Please fill out all fields.");
         }
     }
 
-    // Show home section on initial load
+    // Show the home section on initial load
     showSection('home');
 </script>
 
